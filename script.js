@@ -1,18 +1,19 @@
-const products=[
- {id:1,cat:"CCTV",name:"EZVIZ H1C",mrp:12500,price:9950,desc:"Compact smart indoor security camera with user-friendly setup.",badge:"CCTV CAMERA"},
- {id:2,cat:"CCTV",name:"EZVIZ H8C",mrp:20500,price:17950,desc:"Outdoor smart security camera with remote mobile monitoring.",badge:"CCTV CAMERA"},
- {id:3,cat:"CCTV",name:"EZVIZ H9C",mrp:28500,price:25500,desc:"Advanced dual-lens security solution for wider coverage.",badge:"CCTV CAMERA"},
- {id:4,cat:"CCTV",name:"EZVIZ TY1 Pro",mrp:0,price:0,desc:"Smart indoor camera. Contact us for the latest price and availability.",badge:"CCTV CAMERA"},
- {id:5,cat:"GPS",name:"GF-07 Mini GPS Tracker",mrp:0,price:0,desc:"Compact tracking device. Contact us for current price and availability.",badge:"GPS TRACKER"}
-];
+const products={id:1,cat:"CCTV",name:"EZVIZ H1C",mrp:12500,price:9950,desc:"Compact smart indoor security camera with user-friendly setup.",badge:"CCTV CAMERA",image:"h1c.webp"},
+
+{id:2,cat:"CCTV",name:"EZVIZ H8C",mrp:20500,price:17950,desc:"Outdoor smart security camera with remote mobile monitoring.",badge:"CCTV CAMERA",image:"h8c.webp"},
+
+{id:3,cat:"CCTV",name:"EZVIZ H9C",mrp:28500,price:25500,desc:"Advanced dual-lens security solution for wider coverage.",badge:"CCTV CAMERA"},
+
+{id:4,cat:"CCTV",name:"EZVIZ TY1 Pro",mrp:0,price:0,desc:"Smart indoor camera. Contact us for the latest price and availability.",badge:"CCTV CAMERA",image:"ty1-pro.jpg"},
 let cart=JSON.parse(localStorage.getItem("nanoCart")||"[]");
 
 function money(n){return n?`Rs. ${n.toLocaleString("en-LK")}`:"Contact for Price"}
 function renderProducts(list=products){
  const grid=document.getElementById("productGrid");
  grid.innerHTML=list.map(p=>`
- <article class="product">
-   <div class="product-image"><div class="camera"><div class="lens"></div></div></div>
+ <article class="product"<div class="product-image">
+  ${p.image ? `<img src="${p.image}" alt="${p.name}">` : `<div class="camera"><div class="lens"></div></div>`}
+</div>
    <div class="product-body">
      <span class="tag">${p.badge}</span>
      <h3>${p.name}</h3>
