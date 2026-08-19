@@ -1,4 +1,4 @@
-const products={id:1,cat:"CCTV",name:"EZVIZ H1C",mrp:12500,price:9950,desc:"Compact smart indoor security camera with user-friendly setup.",badge:"CCTV CAMERA",image:"h1c.webp"},
+const products=[id:1,cat:"CCTV",name:"EZVIZ H1C",mrp:12500,price:9950,desc:"Compact smart indoor security camera with user-friendly setup.",badge:"CCTV CAMERA",image:"h1c.webp"},
 
 {id:2,cat:"CCTV",name:"EZVIZ H8C",mrp:20500,price:17950,desc:"Outdoor smart security camera with remote mobile monitoring.",badge:"CCTV CAMERA",image:"h8c.webp"},
 
