@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nano Technologies - CCTV cameras, GPS trackers and smart technology solutions in Sri Lanka.">
+  <title>Nano Technologies | Smart Technology Solutions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">🚚 Islandwide Delivery &nbsp; • &nbsp; 🛡️ Warranty &nbsp; • &nbsp; 🔧 Free Technical Support</div>
+
+  <header class="header">
+    <a class="brand" href="#home">
+      <img src="logo.jpg" alt="Nano Technologies Logo">
+    </a>
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
+      <button class="cart-btn" onclick="openCart()">🛒 Cart <span id="cartCount">0</span></button>
+    </nav>
+    <button class="menu" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">NANO TECHNOLOGIES • SRI LANKA</span>
+        <h1>Smart Technology.<br><span>Trusted Solutions.</span></h1>
+        <p>Professional CCTV cameras, GPS trackers and smart technology products with reliable after-sales support.</p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="#products">Shop Products</a>
+          <a class="btn outline" href="https://wa.me/94777176230?text=Hello%20Nano%20Technologies%2C%20I%20would%20like%20to%20know%20about%20your%20products." target="_blank">Order on WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="orbit"></div>
+        <div class="tech-icon">N</div>
+        <p>SECURITY • SMART TECH • SUPPORT</p>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div>🔧 <b>Free Technical Support</b><small>Friendly setup assistance</small></div>
+      <div>🛡️ <b>Warranty Support</b><small>Service after your purchase</small></div>
+      <div>🚚 <b>Islandwide Delivery</b><small>Delivery across Sri Lanka</small></div>
+      <div>💬 <b>WhatsApp Orders</b><small>Quick customer support</small></div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">OUR STORE</span>
+          <h2>Featured Products</h2>
+        </div>
+        <p>Choose your product and place your order directly through our website.</p>
+      </div>
+      <div class="filters">
+        <button class="filter active" onclick="filterProducts('all', this)">All</button>
+        <button class="filter" onclick="filterProducts('CCTV', this)">CCTV Cameras</button>
+        <button class="filter" onclick="filterProducts('GPS', this)">GPS Trackers</button>
+      </div>
+      <div class="products" id="productGrid"></div>
+    </section>
+
+    <section class="why section" id="why">
+      <div class="section-head">
+        <div><span class="eyebrow">WHY NANO TECHNOLOGIES</span><h2>More Than Just a Sale</h2></div>
+      </div>
+      <div class="why-grid">
+        <article><div class="why-icon">01</div><h3>Professional Products</h3><p>Carefully selected technology products for everyday security and smart solutions.</p></article>
+        <article><div class="why-icon">02</div><h3>Technical Support</h3><p>Get practical help with setup, usage and troubleshooting after your purchase.</p></article>
+        <article><div class="why-icon">03</div><h3>Customer First</h3><p>We aim to provide clear product information and responsive customer service.</p></article>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div><span class="eyebrow">NEED HELP?</span><h2>Talk to Nano Technologies</h2><p>Call or WhatsApp us for product details, prices and orders.</p></div>
+      <a class="btn primary" href="https://wa.me/947171?text=Hello%20Nano%20Technologies" onclick="this.href='https://wa.me/94777176230?text=Hello%20Nano%20Technologies%2C%20I%20need%20help%20with%20a%20product.'">WhatsApp Us</a>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="section-head">
+        <div><span class="eyebrow">CONTACT</span><h2>Get in Touch</h2></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card"><span>📞</span><h3>Call Us</h3><a href="tel:+94777176230">077 717 6230</a><a href="tel:+94713395282">071 339 5282</a></div>
+        <div class="contact-card"><span>💬</span><h3>WhatsApp</h3><a target="_blank" href="https://wa.me/94777176230">077 717 6230</a><a target="_blank" href="https://wa.me/94713395282">071 339 5282</a></div>
+        <div class="contact-card"><span>✉️</span><h3>Email</h3><a href="mailto:nanotech4u2014@gmail.com">nanotech4u2014@gmail.com</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><img src="logo.jpg" alt="Nano Technologies"><p>Smart Technology. Trusted Solutions.</p></div>
+    <div><h4>Quick Links</h4><a href="#products">Products</a><a href="#why">Why Us</a><a href="#contact">Contact</a></div>
+    <div><h4>Support</h4><a href="tel:+94777176230">077 717 6230</a><a href="mailto:nanotech4u2014@gmail.com">Email Us</a></div>
+    <div class="copyright">© <span id="year"></span> Nano Technologies. All rights reserved.</div>
+  </footer>
+
+  <div class="modal" id="cartModal">
+    <div class="modal-box">
+      <button class="close" onclick="closeCart()">×</button>
+      <h2>Your Cart</h2>
+      <div id="cartItems"></div>
+      <div class="cart-total"><span>Total</span><strong id="cartTotal">Rs. 0</strong></div>
+      <button class="btn primary full" onclick="checkout()">Proceed to Order</button>
+    </div>
+  </div>
+
+  <div class="modal" id="orderModal">
+    <div class="modal-box">
+      <button class="close" onclick="closeOrder()">×</button>
+      <h2>Place Your Order</h2>
+      <p class="muted">Enter your details and we will contact you to confirm the order.</p>
+      <form id="orderForm" onsubmit="submitOrder(event)">
+        <input id="customerName" required placeholder="Full Name">
+        <input id="customerPhone" required type="tel" placeholder="Mobile Number">
+        <input id="customerAddress" required placeholder="Delivery Address">
+        <input id="customerDistrict" required placeholder="District">
+        <select id="payment" required><option value="">Payment Method</option><option>Cash on Delivery</option><option>Bank Transfer</option></select>
+        <textarea id="notes" placeholder="Additional notes (optional)"></textarea>
+        <button class="btn primary full" type="submit">Confirm Order</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
