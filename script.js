@@ -650,7 +650,21 @@ if(menuButton){
 menuButton.onclick = toggleMenu;
 
 
-}
+}document.querySelectorAll(".close-modal").forEach(function(button){
+
+    button.onclick = function(){
+
+        const modal = button.closest(".modal");
+
+        if(modal){
+
+            modal.classList.remove("show");
+
+        }
+
+    };
+
+});
 
 
 
