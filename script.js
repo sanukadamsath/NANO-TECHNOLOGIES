@@ -33,14 +33,44 @@ const products = [
     image: ""
   },
   {
-    id: 4,
-    cat: "CCTV",
-    name: "EZVIZ TY1 Pro",
-    mrp: 0,
-    price: 0,
-    desc: "2K+ Pan & Tilt smart indoor camera with Type-C connectivity.",
-    badge: "CCTV CAMERA",
-    image: "ty1-pro.jpg"
+   {
+  id: 4,
+  cat: "CCTV",
+  name: "EZVIZ TY1 Pro 2MP Pan & Tilt Smart WiFi Camera",
+  mrp: 12500,
+  price: 9950,
+  desc: "EZVIZ TY1 Pro is a 2MP Full HD indoor smart WiFi camera with 360° Pan & Tilt view, smart motion detection, human shape detection, IR night vision, two-way audio and remote monitoring through EZVIZ App.",
+  badge: "EZVIZ CCTV CAMERA",
+  image: "ty1-pro.jpg",
+
+  features: [
+    "2MP Full HD Resolution (1080P)",
+    "Indoor Pan & Tilt Smart WiFi Camera",
+    "360° Pan & Tilt View",
+    "Smart Motion Detection",
+    "Human Shape Detection",
+    "IR Night Vision up to 10m",
+    "Two-Way Talk / Audio",
+    "Remote View via EZVIZ Mobile App",
+    "Smart Alerts",
+    "Easy Setup",
+    "Cloud Storage Support",
+    "MicroSD Card Support up to 512GB",
+    "H.265 Video Compression",
+    "USB Type-C Power Supply",
+    "RJ45 Ethernet Port",
+    "Secure & Reliable Performance"
+  ],
+
+  warranty: "1 Year 1-to-1 Replacement Warranty",
+
+  support: [
+    "100% Original Product",
+    "Free Technical Support",
+    "Free Setup Assistance",
+    "24/7 Customer Assistance"
+  ]
+}
   },
   {
     id: 5,
